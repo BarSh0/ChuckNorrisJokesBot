@@ -1,0 +1,30 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:run": "node index.js",
+    "zip": "bestzip index.zip index.js node_modules package.json .env src",
+    "predeploy": "yarn test && yarn run test:run && yarn run zip",
+    "deploy": "deploy.bat",
+    "postdeploy": "del index.zip"
+  },
+  "author": "Bar Shoshani",
+  "license": "ISC",
+  "devDependencies": {
+    "bestzip": "^2.2.1",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "jsdom": "^20.0.0",
+    "telegraf": "^4.8.5",
+    "telegraf-aws": "^1.0.0"
+  }
+}
