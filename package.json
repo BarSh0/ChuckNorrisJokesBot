@@ -8,7 +8,7 @@
     "test:watch": "jest --watch",
     "test:run": "node index.js",
     "zip": "bestzip index.zip index.js node_modules package.json .env src",
-    "deploy": "deploy.bat",
+    "deploy": "deploy.bat"
   },
   "author": "Bar Shoshani",
   "license": "ISC",
